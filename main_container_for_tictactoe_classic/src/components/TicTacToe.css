@@ -19,21 +19,30 @@
 }
 
 .game-title {
-  margin-bottom: 20px;
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--text-color);
+  margin-bottom: 24px;
+  font-size: 2.45rem;
+  font-weight: 700;
+  color: var(--kavia-orange);
+  letter-spacing: -.5px;
+  /* Modern gradient shadow highlight */
+  background: linear-gradient(90deg, #E87A41 60%, #FFB37B 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
 .scoreboard {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: var(--background-color);
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
+  margin-bottom: 22px;
+  padding: 17px 14px 13px 14px;
+  background: rgba(238, 238, 246, 0.78);
+  border-radius: 18px;
+  border: 1.5px solid rgba(232,122,65,0.09);
+  box-shadow: 0 3px 14px rgba(0,0,0,0.04);
+  backdrop-filter: blur(2px);
+  gap: 22px;
 }
 
 .score {
