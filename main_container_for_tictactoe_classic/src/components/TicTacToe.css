@@ -182,31 +182,66 @@
   100% { transform: scale(1);}
 }
 
+/* Animation for new marks */
+.square.X, .square.O {
+  animation: popmark 0.22s cubic-bezier(0.44,1.2,0.2,1);
+}
+@keyframes popmark {
+  0% { transform: scale(0.5) rotate(-18deg); opacity: 0.32;}
+  40% { transform: scale(1.14) rotate(6deg); opacity: 0.97;}
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
 .reset-button {
   margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 1rem;
+  padding: 14px 37px;
+  font-size: 1.09rem;
+  border-radius: 30px !important;
+  background: linear-gradient(90deg, #E87A41ff 80%, #ffb078fa 100%);
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 2px 16px #e87a4151;
+  letter-spacing: .7px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 20px 0 #fd963036, 0 3px 9px #eed7cb2a;
+  transition: 
+    box-shadow 0.18s cubic-bezier(0.3,0.5,0.6,1),
+    background 0.19s cubic-bezier(0.25,0.8,0.4,1),
+    transform 0.17s cubic-bezier(0.4,0.7,0.3,1);
+}
+
+.reset-button:hover, .reset-button:focus, .reset-button:active {
+  background: linear-gradient(90deg, #ffb37b 10%, #E87A41fc 100%);
+  box-shadow: 0 6px 32px 0 #fd963054, 0 6px 26px #ffd5b52e;
+  transform: scale(1.04) translateY(-2px);
+  border: none;
+  outline: none;
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .game {
+    padding: 14px 2vw 15px 2vw;
+    max-width: 99vw;
+  }
+  .game-board {
+    padding: 10px 2px;
+  }
   .square {
-    width: 70px;
-    height: 70px;
+    width: 58vw;
+    height: 58vw;
+    max-width: 68px;
+    max-height: 68px;
     font-size: 2rem;
+    margin: 3vw 2vw;
   }
-  
+  .scoreboard {
+    gap: 10px;
+    padding: 9px 2vw;
+    border-radius: 12px;
+  }
   .game-title {
-    font-size: 1.8rem;
+    font-size: 1.38rem;
   }
-}
-
-/* Animation for new marks */
-.square.X, .square.O {
-  animation: pop 0.3s ease-out;
-}
-
-@keyframes pop {
-  0% { transform: scale(0.8); opacity: 0.5; }
-  100% { transform: scale(1); opacity: 1; }
 }
