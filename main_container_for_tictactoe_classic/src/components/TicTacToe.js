@@ -59,10 +59,13 @@ const TicTacToe = () => {
 
   // Render a single square
   const renderSquare = (index) => {
+    const isWinningSquare = winningLine.includes(index);
+    
     return (
       <button 
-        className={`square ${board[index]}`} 
+        className={`square ${board[index]} ${isWinningSquare ? 'winning' : ''}`} 
         onClick={() => handleClick(index)}
+        disabled={gameStatus !== '' || board[index] !== null}
         aria-label={`square ${index}`}
       >
         {board[index]}
