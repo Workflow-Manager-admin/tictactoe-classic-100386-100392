@@ -47,33 +47,58 @@
 
 .score {
   text-align: center;
-  padding: 0 15px;
+  flex: 1 1 0;
+  padding: 0 12px;
+  border-radius: 10px;
+  transition: box-shadow 0.22s cubic-bezier(0.4, 0.2, 0.2, 1);
+  background: rgba(240,240,255,0.09);
+  box-shadow: 0 1px 3px 0 rgba(232, 122, 65, 0.04);
 }
 
 .player {
-  font-size: 1rem;
-  margin-bottom: 5px;
+  font-size: 1.02rem;
+  margin-bottom: 6px;
+  font-weight: 400;
   color: var(--text-secondary);
+  letter-spacing: .5px;
 }
 
 .score-value {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.72rem;
+  font-weight: 700;
+  /* Modern drop highlight for scores */
+  background: linear-gradient(90deg, #E87A41bb 30%, #ffccad69 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 1px 4px #E87A4147;
 }
 
 .score:first-child .score-value {
-  color: var(--kavia-orange);
+  background: linear-gradient(90deg, #E87A41ee 46%, #FFB37B98 100%);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .score:last-child .score-value {
-  color: #4D94FF;
+  background: linear-gradient(90deg, #4D94FFcc 40%, #e7f1ff88 100%);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .status-message {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--kavia-orange);
+  margin-bottom: 26px;
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: #ff9333;
+  background: rgba(255,255,255,0.64);
+  border-radius: 9px;
+  padding: 10px 24px 10px 24px;
+  box-shadow: 0 4px 24px rgba(232, 122, 65, 0.05);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(220,120,50,0.09);
+  text-align: center;
 }
 
 .game-board {
