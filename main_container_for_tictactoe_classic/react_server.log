@@ -2,9 +2,9 @@
 > react-kavia@0.1.0 start
 > react-scripts start
 
-(node:572) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:1286) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:572) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:1286) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
 Compiled successfully!
@@ -19,98 +19,3 @@ To create a production build, use npm run build.
 
 webpack compiled successfully
 Compiling...
-Compiled successfully!
-webpack compiled successfully
-Compiling...
-Compiled successfully!
-webpack compiled successfully
-Compiling...
-Failed to compile.
-
-[eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-
-Search for the keywords to learn more about each error.
-ERROR in [eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-
-Search for the keywords to learn more about each error.
-
-webpack compiled with 1 error
-Compiling...
-Failed to compile.
-
-[eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-
-Search for the keywords to learn more about each error.
-ERROR in [eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-
-Search for the keywords to learn more about each error.
-
-webpack compiled with 1 error
-Compiling...
-Failed to compile.
-
-[eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-
-Search for the keywords to learn more about each error.
-ERROR in [eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-
-Search for the keywords to learn more about each error.
-
-webpack compiled with 1 error
-Compiling...
-Failed to compile.
-
-[eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-  Line 83:41:  'scores' is not defined       no-undef
-  Line 87:41:  'scores' is not defined       no-undef
-  Line 91:41:  'scores' is not defined       no-undef
-
-Search for the keywords to learn more about each error.
-ERROR in [eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-  Line 83:41:  'scores' is not defined       no-undef
-  Line 87:41:  'scores' is not defined       no-undef
-  Line 91:41:  'scores' is not defined       no-undef
-
-Search for the keywords to learn more about each error.
-
-webpack compiled with 1 error
-Compiling...
-Failed to compile.
-
-[eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-  Line 83:41:  'scores' is not defined       no-undef
-  Line 87:41:  'scores' is not defined       no-undef
-  Line 91:41:  'scores' is not defined       no-undef
-
-Search for the keywords to learn more about each error.
-ERROR in [eslint] 
-src/components/TicTacToe.js
-  Line 62:29:  'winningLine' is not defined  no-undef
-  Line 83:41:  'scores' is not defined       no-undef
-  Line 87:41:  'scores' is not defined       no-undef
-  Line 91:41:  'scores' is not defined       no-undef
-
-Search for the keywords to learn more about each error.
-
-webpack compiled with 1 error
-Compiling...
-Compiled successfully!
-webpack compiled successfully
