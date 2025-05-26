@@ -78,16 +78,17 @@
   justify-content: center;
   font-size: 2.5rem;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--background-color);
   color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .square:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--hover-color);
 }
 
 .square.X {
@@ -99,8 +100,8 @@
 }
 
 .square.winning {
-  background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba(232, 122, 65, 0.1);
+  box-shadow: 0 0 10px rgba(232, 122, 65, 0.3);
   animation: pulse 1.5s infinite;
 }
 
