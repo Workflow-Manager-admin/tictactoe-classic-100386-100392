@@ -77,6 +77,21 @@ const TicTacToe = () => {
     <div className="game">
       <h2 className="game-title">Tic-Tac-Toe Classic</h2>
       
+      <div className="scoreboard">
+        <div className="score">
+          <div className="player">Player X</div>
+          <div className="score-value">{scores.X}</div>
+        </div>
+        <div className="score">
+          <div className="player">Draws</div>
+          <div className="score-value">{scores.draws}</div>
+        </div>
+        <div className="score">
+          <div className="player">Player O</div>
+          <div className="score-value">{scores.O}</div>
+        </div>
+      </div>
+      
       <div className="status-message">{getStatusMessage()}</div>
       
       <div className="game-board">
