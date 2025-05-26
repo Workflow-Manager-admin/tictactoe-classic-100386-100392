@@ -12,15 +12,34 @@ const TicTacToe = () => {
   const [isXNext, setIsXNext] = useState(true); // true for X, false for O
   const [gameStatus, setGameStatus] = useState(''); // '', 'winner', or 'draw'
   const [winner, setWinner] = useState(null);
+  const [winningLine, setWinningLine] = useState([]);
+  const [scores, setScores] = useState({
+    X: 0,
+    O: 0,
+    draws: 0
+  });
 
   // Check for winner or draw after each move
   useEffect(() => {
-    const winner = calculateWinner(board);
-    if (winner) {
+    const result = calculateWinner(board);
+    if (result) {
       setGameStatus('winner');
-      setWinner(winner);
+      setWinner(result.winner);
+      setWinningLine(result.line);
+      
+      // Update scores
+      setScores(prevScores => ({
+        ...prevScores,
+        [result.winner]: prevScores[result.winner] + 1
+      }));
     } else if (isBoardFull(board)) {
       setGameStatus('draw');
+      
+      // Update draw count
+      setScores(prevScores => ({
+        ...prevScores,
+        draws: prevScores.draws + 1
+      }));
     }
   }, [board]);
 
@@ -44,6 +63,7 @@ const TicTacToe = () => {
     setIsXNext(true);
     setGameStatus('');
     setWinner(null);
+    setWinningLine([]);
   };
 
   // Determine current status message
