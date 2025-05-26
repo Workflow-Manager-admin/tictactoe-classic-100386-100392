@@ -104,7 +104,15 @@
 .game-board {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
+  padding: 20px 10px;
+  background: rgba(245,245,250,0.8);
+  box-shadow: 0 6px 30px 0 rgba(255,140,80, 0.08);
+  border-radius: 18px;
+  gap: 0px;
+  border: 1.5px solid rgba(246,162,103,0.09);
+  backdrop-filter: blur(3px);
+  transition: box-shadow 0.18s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .board-row {
@@ -112,45 +120,66 @@
 }
 
 .square {
-  width: 80px;
-  height: 80px;
-  margin: 4px;
+  width: 92px;
+  height: 92px;
+  margin: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2.95rem;
   font-weight: bold;
-  background-color: var(--background-color);
+  background: linear-gradient(155deg, #FFF5EA 70%, #fdead597 100%);
   color: var(--text-color);
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border: 2px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: 0 8px 14px 0 rgba(244, 173, 100, 0.07), 0 1.5px 4px rgba(0, 0, 0, 0.07);
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: 
+    background 0.13s cubic-bezier(0.4,0.2,0.2,1),
+    border 0.13s cubic-bezier(0.4,0.2,0.2,1),
+    box-shadow 0.19s cubic-bezier(0.4,0.2,0.2,1),
+    transform 0.12s cubic-bezier(0.4,0.3,0.6,1);
+  user-select: none;
+  outline: none;
+  will-change: transform;
+  position: relative;
+  z-index: 1;
 }
 
-.square:hover {
-  background-color: var(--hover-color);
+.square:hover, .square:focus-visible {
+  background: linear-gradient(160deg, #ffcda1 10%, #ffe7c4 100%);
+  border: 2.2px solid var(--kavia-orange);
+  box-shadow: 0 4px 28px 0 #e87a4127, 0 2px 6px #e87a4112;
+  transform: scale(1.07) translateY(-2px);
+}
+
+.square:active {
+  background: linear-gradient(155deg, #ffe7c4 60%, #ffcfa1 100%);
+  transform: scale(0.97);
 }
 
 .square.X {
   color: var(--kavia-orange);
+  text-shadow: 0 1.5px 5px #e87a416b, 0 2px 8px #ffd0a7a2;
 }
 
 .square.O {
-  color: #4D94FF;  /* Blue color for contrast */
+  color: #4D94FF;
+  text-shadow: 0 1.5px 5px #4d94ff57, 0 2px 8px #d7eaff9c;
 }
 
 .square.winning {
-  background-color: rgba(232, 122, 65, 0.1);
-  box-shadow: 0 0 10px rgba(232, 122, 65, 0.3);
+  background: linear-gradient(140deg, #ffe2d0 10%, #ffe7c4 100%);
+  box-shadow: 0 0 18px 5px #E87A41bb, 0 4px 28px #ffd0a72c;
   animation: pulse 1.5s infinite;
+  border-color: #E87A41aa;
+  z-index: 2;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% { transform: scale(1);}
+  50% { transform: scale(1.08);}
+  100% { transform: scale(1);}
 }
 
 .reset-button {
